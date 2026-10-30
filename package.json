@@ -1,0 +1,48 @@
+{
+  "name": "dsh-session-delete",
+  "version": "0.1.0",
+  "description": "Sidebar session menu entry that permanently deletes a conversation (archive-gated unload + on-disk session directory removal).",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "delete"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bie-666/dsh-session-delete.git"
+  },
+  "homepage": "https://github.com/bie-666/dsh-session-delete#readme",
+  "bugs": {
+    "url": "https://github.com/bie-666/dsh-session-delete/issues"
+  },
+  "author": "别振南 (https://github.com/bie-666)"
+}
